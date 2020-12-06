@@ -1,5 +1,5 @@
 {
-  "name": "API-FatFriendly",
+  "name": "API-FatFashion",
   "version": "1.0.0",
   "description": "Esta API está sendo desenvolvida para o projeto final do curso Back-End da {Reprograma}.",
   "main": "server.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/romanellipereira/API-FatFriendly.git"
+    "url": "git+https://github.com/romanellipereira/API-FatFashion.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-  "url": "https://github.com/romanellipereira/API-FatFriendly/issues"
+  "url": "https://github.com/romanellipereira/API-FatFasion/issues"
   },
-  "homepage": "https://github.com/romanellipereira/API-FatFriendly#readme",
+  "homepage": "https://github.com/romanellipereira/API-FatFashion#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
