@@ -3,7 +3,7 @@ const router = express.Router()
 
 router.get("/", function (req, res) {
   res.status(200).send({
-    title: "Fat Fashion - moda sem gordofobia",
+    title: "Fat Fashion - Moda sem gordofobia",
     version: "1.0.0"
   })
 })

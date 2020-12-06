@@ -8,6 +8,7 @@ const lojasSchema = new mongoose.Schema({
     bairro: { type: String },
     endereco: { type: String },
     cep: { type: String },
+    website: { type: String },
     redeSocial: { type: String },
     telefone: { type: String },
     whatsapp: { type: String },
