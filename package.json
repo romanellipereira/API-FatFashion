@@ -1,0 +1,30 @@
+{
+  "name": "API-FatFriendly",
+  "version": "1.0.0",
+  "description": "Esta API está sendo desenvolvida para o projeto final do curso Back-End da {Reprograma}.",
+  "main": "server.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romanellipereira/API-FatFriendly.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+  "url": "https://github.com/romanellipereira/API-FatFriendly/issues"
+  },
+  "homepage": "https://github.com/romanellipereira/API-FatFriendly#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.4",
+    "nodemon": "^2.0.6"
+  },
+  "engines": { "node": "v12.18.3" }
+}

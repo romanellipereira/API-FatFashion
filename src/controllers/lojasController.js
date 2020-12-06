@@ -32,6 +32,32 @@ const newLoja = (req, res) => {
     });
 };
 
+const deleteLojaById = (req, res) => {
+    const id = req.params.id;
+
+    lojas.find({ id }, function(err, loja){
+        if(loja.length > 0) {
+            lojas.deleteMany({ id }, function(err){
+                if(err) {
+                    res.status(500).send({
+                        message: err.message,
+                        status: "FAIL"
+                    });
+                };
+                res.status(200).send({
+                    message: 'Loja removida com sucesso.',
+                    status: "SUCCESS"
+                });
+            });
+        }else {
+            res.status(200).send({
+                message: 'Loja não encontrada.',
+                status: "EMPTY"
+            });
+        };
+    });
+};
+
 module.exports = {
     getAll,
     getById,
