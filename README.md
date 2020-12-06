@@ -1,4 +1,4 @@
-![fatfashion](/imagens/body-positive.jpg)
+![fatfashion](/images/body-positive.jpg)
 
 # API FatFashion
 
