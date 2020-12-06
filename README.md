@@ -1,4 +1,4 @@
-# API-FatFriendly
+# API-FatFashion
 
 Esta API está sendo desenvolvida para o projeto final do curso Back-End da {Reprograma}. 
 
@@ -14,7 +14,7 @@ Por muito tempo as mulheres “cheinhas” se escondiam, por vergonha, por “n�
 Já se foi o tempo em que roupa para cheinhas era só naquele estilo “senhora”, hoje em dia as gordinhas não querem mais usar as roupas para se “esconder”, com isso, várias marcas apostaram e continuam apostando nesse segmento. Assim, podemos encontrar no mercado muitas opções de modelos, para todos os gostos e estilos. Importantes magazines como Renner e Riachuelo, investem nesse público, lá podemos encontrar peças cheias de estilo e com um preço muito acessível!
 Fonte: https://ondm.com.br/2018/07/a-moda-plus-size-ganha-forca-no-brasil-e-supera-padroes-de-beleza-do-mercado/
 
-A API Fat Friendly foi criada com o objetivo de conectar pessoas gordas a lojas de roupas que produzem e/ou revendem peças tamanhos grandes, que não são encontradas em lojas convencionais. Nesta API, as lojas de atacado e varejo, físicas ou online, podem cadastrar sua marca e fornecer as informações dos tipos de roupas e tamanhos que comercializam, e os usuários podem fazer buscas de acordo com a peça que procuram.
+A API Fat Fashion foi criada com o objetivo de conectar pessoas gordas a lojas de roupas que produzem e/ou revendem peças tamanhos grandes, que não são encontradas em lojas convencionais. Nesta API, as lojas de atacado e varejo, físicas ou online, podem cadastrar sua marca e fornecer as informações dos tipos de roupas e tamanhos que comercializam, e os usuários podem fazer buscas de acordo com a peça que procuram.
 
 ## Tecnologias
 
