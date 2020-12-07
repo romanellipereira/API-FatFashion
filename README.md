@@ -17,8 +17,8 @@ Fonte: [O Negócio da Moda](https://ondm.com.br/2018/07/a-moda-plus-size-ganha-f
 
 A API FatFashion foi criada com o objetivo de conectar pessoas gordas a lojas de roupas que produzem e/ou revendem peças tamanhos grandes, que não são encontradas em lojas convencionais. Nesta API, as lojas de atacado e varejo, físicas ou online, podem cadastrar sua marca e fornecer as informações dos tipos de roupas e tamanhos que comercializam, e os usuários podem fazer buscas de acordo com a peça que procuram.
 
-![fatfashion](/images/musas.png)
-> Mulheres que inspiraram este projeto: [Rauanny Bezerra](https://www.instagram.com/rauannybezerra/) | [Carol Zacarias](https://www.instagram.com/carolzacaa/) | [Iracy Lemos](https://www.instagram.com/tamanho50/) | [Mari Cid](https://www.instagram.com/maricids/) | [Rizia Cerqueira](https://www.instagram.com/riziacerqueira/) | [Rayane Souza](https://www.instagram.com/rayanesouzaplus/) | [Mel Soares](https://www.instagram.com/relaxaaifofa/)
+![fatfashion](/images/musas2.png)
+> Mulheres que inspiraram este projeto: [Rauanny Bezerra](https://www.instagram.com/rauannybezerra/) | [Carol Zacarias](https://www.instagram.com/carolzacaa/) | [Iracy Lemos](https://www.instagram.com/tamanho50/)
 
 ## Tecnologias
 
