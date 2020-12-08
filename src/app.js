@@ -17,7 +17,8 @@ db.once("open", function (){
 })
 
 const index = require("./routes/index");
-const lojas = require("./routes/lojasRoute");
+const stores = require("./routes/storesRoute");
+const users = require("./routes/usersRoute");
 
 app.use(express.json());
 
@@ -32,6 +33,7 @@ app.use(function (req, res, next) {
   })
 
 app.use("/", index);
-app.use("/lojas", lojas);
+app.use("/lojas", stores);
+app.use("/usuarios", users);
 
 module.exports = app

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const lojasSchema = new mongoose.Schema({
+const storesSchema = new mongoose.Schema({
     id: { type: Number },
     marca: { type: String },
     estado: { type: String },
@@ -21,5 +21,5 @@ const lojasSchema = new mongoose.Schema({
     versionKey: false
 });
 
-const lojas = mongoose.model('lojas', lojasSchema);
-module.exports = lojas;
+const stores = mongoose.model('stores', storesSchema);
+module.exports = stores;
