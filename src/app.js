@@ -13,7 +13,7 @@ let db = mongoose.connection;
 
 db.on("error", console.log.bind(console, "connection error:"))
 db.once("open", function (){
-  console.log("Conexão realizada com sucesso.")
+  console.log("Conexão com o banco de dados realizada com sucesso.")
 })
 
 const index = require("./routes/index");
