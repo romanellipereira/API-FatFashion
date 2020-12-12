@@ -7,20 +7,20 @@ const getAll = (req, res) => {
             res.status(500).send({ message: err.message })
         }
         res.status(200).send(users);
-    })
+    });
 };
 
 const getByUserName = (req, res) => {
     const name = req.params.userName;
-    users.find({ userName: name }, function(err, user){
+
+    users.find({ nomeUsuario: name }, { _id: 0 }, (err, user) => {
         if(err) {
             res.status(500).send({ message: err.message })
         }
         res.status(200).send(user);
-    })
+    });
 };
 
-// validado
 const newUser = (req, res) => {
     console.log(req.body);
 
@@ -30,46 +30,36 @@ const newUser = (req, res) => {
             res.status(500).send({ message: err.message });
         } else {
             res.status(201).send(user.toJSON());
-        }
+        };
     });
 };
 
-const updateUserById = (req, res) => {
-    const id = req.params.id;
-
-    users.findById(id , (err, user) => {
+const updateUserByUserName = (req, res) => {
+    const userName = req.params.userName
+    users.updateMany({ nomeUsuario: userName }, { $set : req.body }, { upsert : true }, (err) => {
         if (err) {
-            res.status(500).send({ message: err.message });
-        } else if (!user) {
-            res.status(404).send({ message: "Usuário não encontrado." });
+            res.status(500).send({ message: err.message })
         } else {
-            users.findByIdAndUpdate( id , req.body , { new: true } , (err) => {
-                res.status(200).send({ message: "Usuário atualizado com sucesso." });
-            });
-        }
+            res.status(200).send({ message : "Usuário atualizado com sucesso."})
+        };
     });
-}
+};
 
-const deleteUserById = (req, res) => {
-    const id = req.params.id;
-
-    users.findById(id , (err, user) => {
+const deleteUserByUserName = (req, res) => {
+    const userName = req.params.userName
+    users.deleteMany({ nomeUsuario: userName }, (err) => {
         if (err) {
-            res.status(500).send({ message: err.message });
-        } else if (!user) {
-            res.status(404).send({ message: "Usuário não encontrado." });
+            res.status(500).send({ message: err.message })
         } else {
-            users.findByIdAndDelete( id , (err) => {
-                res.status(200).send({ message: "Usuário removido com sucesso." });
-            });
-        }
+            res.status(200).send({ message : "Usuário removido com sucesso."})
+        };
     });
-}
+};
 
 module.exports = {
     getAll,
     getByUserName,
     newUser,
-    updateUserById,
-    deleteUserById
+    updateUserByUserName,
+    deleteUserByUserName
 };
