@@ -19,6 +19,39 @@ const getStoreById = (req, res) => {
     })
 };
 
+const getByState = (req, res) => {
+    const state = req.params.state;
+    stores.find( { "endereco.estado": state } , (err, store) => {
+        if(err) {
+            res.status(500).send({ message: err.message })
+        } else {
+            res.status(200).send(store);
+        }
+    })
+};
+
+const getByCity = (req, res) => {
+    const city = req.params.city;
+    stores.find( { "endereco.cidade": city } , (err, store) => {
+        if(err) {
+            res.status(500).send({ message: err.message })
+        } else {
+            res.status(200).send(store);
+        }
+    })
+};
+
+const getByDistrict = (req, res) => {
+    const district = req.params.district;
+    stores.find( { "endereco.bairro": district } , (err, store) => {
+        if(err) {
+            res.status(500).send({ message: err.message })
+        } else {
+            res.status(200).send(store);
+        }
+    })
+};
+
 const getByStoreSName = (req, res) => {
     const storeSName = req.params.storeSName;
     stores.find( { nomeLoja: storeSName } , (err, store) => {
@@ -56,16 +89,19 @@ const updateStoreById = (req, res) => {
     });
 };
 
-// const updateAdressById = (req, res) => {
-//     const id = req.params.id
-//     stores.updateMany({ id } , { endereco: req.body }, { upsert : true }, (err) => {
-//         if (err) {
-//             res.status(500).send({ message: err.message })
-//         } else {
-//             res.status(200).send({ message : "curso atualizado com sucesso"})
-//         }
-//     })
-// }
+const updateAdressById = (req, res) => {
+    const id = req.params.id;
+
+    stores.updateMany({ _id: id }, { $set: { "endereco": req.body }}, { upsert : true }, (err, store) => {
+        if(err) {
+            res.status(500).send({ message: err.message })
+        } else if (!store) {
+            res.status(404).send({ message: "Loja não encontrada." });
+        } else {
+            res.status(200).send({ message: "Endereço atualizado." });
+        };
+    });
+};
 
 const deleteStoreById = (req, res) => {
     const id = req.params.id;
@@ -85,8 +121,11 @@ module.exports = {
     getAll,
     getStoreById,
     getByStoreSName,
+    getByState,
+    getByCity,
+    getByDistrict,
     newStore,
     updateStoreById,
-    // updateAdressById,
+    updateAdressById,
     deleteStoreById,
 };

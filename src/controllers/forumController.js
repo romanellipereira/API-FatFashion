@@ -49,7 +49,7 @@ const updatePostById = (req, res) => {
 const postComment = (req, res) => {
     const id = req.params.id;
 
-    posts.updateMany({ _id: id }, { $set: { "comentarios": req.body }}, { upsert : true }, (err, post) => {
+    posts.updateMany({ _id: id }, { $set: { "comentarios": req.body }}, { upsert : true}, (err, post) => {
         if(err) {
             res.status(500).send({ message: err.message })
         } else if (!post) {
