@@ -44,7 +44,21 @@ const updatePostById = (req, res) => {
         res.status(200).send({ message: "Discussão atualizada com sucesso." });
         }
     });
-}
+};
+
+const postComment = (req, res) => {
+    const id = req.params.id;
+
+    posts.updateMany({ _id: id }, { $set: { "comentarios": req.body }}, { upsert : true }, (err, post) => {
+        if(err) {
+            res.status(500).send({ message: err.message })
+        } else if (!post) {
+            res.status(404).send({ message: "Discussão não encontrada." });
+        } else {
+            res.status(200).send({ message: "Comentário inserido com sucesso." });
+        };
+    });
+};
 
 const deletePostById = (req, res) => {
     const id = req.params.id;
@@ -65,5 +79,6 @@ module.exports = {
     getPostByTitle,
     newPost,
     updatePostById,
+    postComment,
     deletePostById
 }
