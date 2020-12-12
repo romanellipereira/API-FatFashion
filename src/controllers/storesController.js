@@ -45,22 +45,20 @@ const newStore = (req, res) => {
 const updateStoreById = (req, res) => {
     const id = req.params.id;
 
-    stores.findById(id , (err, store) => {
+    stores.findByIdAndUpdate( id , (err, store) => {
         if (err) {
             res.status(500).send({ message: err.message });
         } else if (!store) {
             res.status(404).send({ message: "Loja não encontrada." });
         } else {
-            stores.findByIdAndUpdate( id , req.body , { new: true } , (err) => {
-                res.status(200).send({ message: "Loja atualizada com sucesso." });
-            });
+            res.status(200).send({ message: "Loja atualizada com sucesso." });
         }
     });
 };
 
 // const updateAdressById = (req, res) => {
 //     const id = req.params.id
-//     stores.updateMany( stores.adresses , { $set : req.body }, { upsert : true }, function(err){
+//     stores.updateMany({ id } , { endereco: req.body }, { upsert : true }, (err) => {
 //         if (err) {
 //             res.status(500).send({ message: err.message })
 //         } else {
@@ -72,18 +70,16 @@ const updateStoreById = (req, res) => {
 const deleteStoreById = (req, res) => {
     const id = req.params.id;
 
-    stores.findById(id , (err, store) => {
+    stores.findByIdAndDelete( id , (err, store) => {
         if (err) {
             res.status(500).send({ message: err.message });
         } else if (!store) {
             res.status(404).send({ message: "Loja não encontrada." });
         } else {
-            stores.findByIdAndDelete( id , (err) => {
-                res.status(200).send({ message: "Loja removida com sucesso." });
-            });
+            res.status(200).send({ message: "Loja removida com sucesso." });
         }
     });
-}
+};
 
 module.exports = {
     getAll,
@@ -91,5 +87,6 @@ module.exports = {
     getByStoreSName,
     newStore,
     updateStoreById,
+    // updateAdressById,
     deleteStoreById,
 };

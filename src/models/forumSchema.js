@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
 
 const forumSchema = new mongoose.Schema({
-    usuarioInclusao: { type: String },
-    titulo: { type: String },
-    texto: { type: String },
+    usuarioInclusao: { type: String , required: true },
+    titulo: { type: String , required: true },
+    texto: { type: String , required: true },
     comentarios: [
     {
-        usuarioInclusaoComentario: { type: String },
-        textoComentario: { type: String }
+        usuarioInclusaoComentario: { type: String , required: true },
+        textoComentario: { type: String , required: true },
     }
     ]
 },{

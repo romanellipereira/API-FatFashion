@@ -35,15 +35,13 @@ const newPost = (req, res) => {
 const updatePostById = (req, res) => {
     const id = req.params.id;
 
-    posts.findById(id , (err, post) => {
+    posts.findByIdAndUpdate( id , req.body , { new: true } , (err, post) => {
         if (err) {
             res.status(500).send({ message: err.message });
         } else if (!post) {
             res.status(404).send({ message: "Discussão não encontrada." });
         } else {
-            posts.findByIdAndUpdate( id , req.body , { new: true } , (err) => {
-                res.status(200).send({ message: "Discussão atualizada com sucesso." });
-            });
+        res.status(200).send({ message: "Discussão atualizada com sucesso." });
         }
     });
 }
@@ -51,15 +49,13 @@ const updatePostById = (req, res) => {
 const deletePostById = (req, res) => {
     const id = req.params.id;
 
-    posts.findById(id , (err, post) => {
+    posts.findByIdAndDelete( id , (err, post) => {
         if (err) {
             res.status(500).send({ message: err.message });
         } else if (!post) {
-            res.status(404).send({ message: "Loja não encontrada." });
+            res.status(404).send({ message: "Discussão não encontrada." });
         } else {
-            posts.findByIdAndDelete( id , (err) => {
-                res.status(200).send({ message: "Loja excluída com sucesso." });
-            });
+        res.status(200).send({ message: "Discussão removida com sucesso." });
         }
     });
 }
