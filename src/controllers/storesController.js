@@ -11,7 +11,17 @@ const getAll = (req, res) => {
 
 const getStoreById = (req, res) => {
     const id = req.params.id;
-    stores.findById( id , function(err, store){
+    stores.findById( id , (err, store) => {
+        if(err) {
+            res.status(500).send({ message: err.message })
+        }
+        res.status(200).send(store);
+    })
+};
+
+const getByStoreSName = (req, res) => {
+    const storeSName = req.params.storeSName;
+    stores.find( { nomeLoja: storeSName } , (err, store) => {
         if(err) {
             res.status(500).send({ message: err.message })
         }
@@ -78,6 +88,7 @@ const deleteStoreById = (req, res) => {
 module.exports = {
     getAll,
     getStoreById,
+    getByStoreSName,
     newStore,
     updateStoreById,
     deleteStoreById,
