@@ -52,6 +52,26 @@ const getByDistrict = (req, res) => {
     })
 };
 
+const getAuthorialFashion = (req, res) => {
+    stores.find({ confeccaoPropria: true }, (err, store) => {
+        if (err) {
+            res.status(500).send({ message: err.message })
+        } else {
+            res.status(200).send(store)
+        }
+    });
+};
+
+const getNotAuthorialFashion = (req, res) => {
+    stores.find({ confeccaoPropria: false }, (err, store) => {
+        if (err) {
+            res.status(500).send({ message: err.message })
+        } else {
+            res.status(200).send(store)
+        }
+    });
+};
+
 const getByStoreSName = (req, res) => {
     const storeSName = req.params.storeSName;
     stores.find( { nomeLoja: storeSName } , (err, store) => {
@@ -120,10 +140,12 @@ const deleteStoreById = (req, res) => {
 module.exports = {
     getAll,
     getStoreById,
-    getByStoreSName,
     getByState,
     getByCity,
     getByDistrict,
+    getAuthorialFashion,
+    getNotAuthorialFashion,
+    getByStoreSName,
     newStore,
     updateStoreById,
     updateAdressById,

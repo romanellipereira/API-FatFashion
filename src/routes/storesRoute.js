@@ -8,6 +8,8 @@ router.get("/:storeSName", controller.getByStoreSName); //validado
 router.get("/estado/:state", controller.getByState); //validado
 router.get("/cidade/:city", controller.getByCity); //validado
 router.get("/bairro/:district", controller.getByDistrict); //validado
+router.get("/confeccao/propria", controller.getAuthorialFashion); //validado
+router.get("/confeccao/terceiros", controller.getNotAuthorialFashion); //validado
 router.post("/nova", controller.newStore); //validado
 router.patch("/atualizar/id/:id", controller.updateStoreById); //validado
 router.patch("/atualizar/:id/endereco", controller.updateAdressById);
