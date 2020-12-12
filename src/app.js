@@ -2,11 +2,13 @@ require('dotenv').config();
 
 const express = require("express")
 const mongoose = require("mongoose")
+const bodyParser = require("body-parser")
 const app = express()
 
 mongoose.connect(`${process.env.MONGODB_URL}`, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useCreateIndex: true
 });
 
 let db = mongoose.connection;
@@ -19,8 +21,9 @@ db.once("open", function (){
 const index = require("./routes/index");
 const stores = require("./routes/storesRoute");
 const users = require("./routes/usersRoute");
+const forum = require("./routes/forumRoute");
 
-app.use(express.json());
+app.use(bodyParser.json());
 
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*")
@@ -35,5 +38,6 @@ app.use(function (req, res, next) {
 app.use("/", index);
 app.use("/lojas", stores);
 app.use("/usuarios", users);
+app.use("/forum", forum);
 
 module.exports = app
