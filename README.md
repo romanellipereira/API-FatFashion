@@ -102,7 +102,7 @@ DELETE|/forum/remover/id/:id|Remover discussão de acordo com o id informado
 
 Se você, assim como eu, acredita num mundo mais inclusivo, venha contribuir corrigindo ou melhorando o código e cadastrando as lojas que você conhece e recomeda!
 
-Clique no botão ```Fork``` e siga o passo a passo para instalação da aplicação no seu computador. Utilize a IDE de sua preferência para editar.
+Clique no botão ```Fork``` e siga o passo a passo para instalação da aplicação no seu computador, crie uma *Branch* e, no fim das edições, abra uma *Pull Request*. Utilize a IDE de sua preferência para editar.
 
 ## Dedicação e Agradecimento
 ![fatfashion](/images/musas.png)
