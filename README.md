@@ -104,6 +104,17 @@ Se você, assim como eu, acredita num mundo mais inclusivo, venha contribuir cor
 
 Clique no botão ```Fork``` e siga o passo a passo para instalação da aplicação no seu computador, crie uma *Branch* e, no fim das edições, abra uma *Pull Request*. Utilize a IDE de sua preferência para editar.
 
+### Melhorias e correções sugeridas
+
+* Criar autenticação
+* Relacionar os usuários às lojas por eles cadastradas
+* Relacionar os usuários às discssões e comentários incluídos por eles no Forum
+* Corrigir o código de inserir novo comentário (o código atual só permite a criação de 1 comentário e a edição dele)
+* Criar rotas com *query param*
+* Criar rota para pesquisar lojas por tamanhos disponíveis
+
+**Toda e qualquer melhoria ou correção será muito bem vinda!**
+
 ## Dedicação e Agradecimento
 ![fatfashion](/images/musas.png)
 > Mulheres que inspiraram este projeto: [Rauanny Bezerra](https://www.instagram.com/rauannybezerra/) | [Carol Zacarias](https://www.instagram.com/carolzacaa/) | [Iracy Lemos](https://www.instagram.com/tamanho50/)
