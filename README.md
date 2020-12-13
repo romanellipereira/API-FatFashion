@@ -15,7 +15,7 @@ Fonte: [Hospital Oswaldo Cruz](https://www.hospitaloswaldocruz.org.br/imprensa/n
 
 Fonte: [O Negócio da Moda](https://ondm.com.br/2018/07/a-moda-plus-size-ganha-forca-no-brasil-e-supera-padroes-de-beleza-do-mercado/)
 
-A API FatFashion foi criada com o objetivo de conectar pessoas gordas a lojas de roupas que produzem e/ou revendem peças tamanhos grandes, que não são encontradas em lojas convencionais. Nesta API, as lojas de atacado e varejo, físicas ou online, podem cadastrar sua marca e fornecer as informações dos tipos de roupas e tamanhos que comercializam, e os usuários podem fazer buscas de acordo com a peça que procuram.
+A API FatFashion foi criada com o objetivo de conectar pessoas gordas a lojas de roupas que produzem e/ou revendem peças tamanhos grandes, que não são encontradas em lojas convencionais. Nesta API, as lojas de atacado e varejo, físicas ou online, podem cadastrar sua marca e fornecer as informações dos tipos de roupas e tamanhos que comercializam, e os usuários podem fazer buscas de acordo região onde está.
 
 ![seuestilo](/images/estilo.jpg?style=centerme)
 
